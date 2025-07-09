@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Tech Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #f0f2f5, #d4e3f3);
+            color: #333;
+        }
+        .navbar {
+            background-color: #34495e;
+            overflow: hidden;
+            padding: 15px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #ecf0f1;
+            color: black;
+        }
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .section {
+            background: white;
+            padding: 30px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .section img {
+            width: 120px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+</div>
+
+<div class="container">
+    <div class="section">
+        <img src="{{ url_for('static', filename='js/python.png') }}" alt="Python Logo">
+        <h3>Built using Python 🐍</h3>
+        <p>This website is powered by Python — a beginner-friendly and powerful programming language for web development, data science, and more.</p>
+    </div>
+
+    <div class="section">
+        <img src="{{ url_for('static', filename='js/flask.png') }}" alt="Flask Logo">
+        <h3>Framework: Flask 🔥</h3>
+        <p>Flask is a lightweight Python web framework used to create this website. It allows fast and flexible backend development with minimal code.</p>
+    </div>
+
+    <div class="section">
+        <img src="{{ url_for('static', filename='js/htmlcss.png') }}" alt="HTML & CSS">
+        <h3>Frontend with HTML & CSS 🎨</h3>
+        <p>HTML and CSS give this site structure and style. Clean layout, responsive design, and custom styling make it look professional.</p>
+    </div>
+</div>
+
+</body>
+</html>

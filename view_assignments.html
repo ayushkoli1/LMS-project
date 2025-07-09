@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Assignments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .container { max-width: 900px; margin: 40px auto; }
+        h2 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        a.download-link { color: blue; text-decoration: underline; }
+        .back-btn { margin-top: 20px; display: block; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📂 Assignments</h2>
+        {% if assignments %}
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>File</th>
+                    <th>Upload Date</th>
+                </tr>
+                {% for assignment in assignments %}
+                <tr>
+                    <td>{{ assignment.Title }}</td>
+                    <td>{{ assignment.Description }}</td>
+                    <td>
+                        <a class="download-link" href="{{ url_for('download_assignment', filename=assignment.FileName) }}">Download</a>
+                    </td>
+                    <td>{{ assignment.Date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No assignments uploaded yet.</p>
+        {% endif %}
+        <a href="{{ url_for('student_dashboard') }}" class="back-btn">🔙 Back to Dashboard</a>
+    </div>
+</body>
+</html>

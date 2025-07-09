@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Result</title>
+    <meta http-equiv="refresh" content="5;url={{ url_for('student_dashboard') }}">
+    <style>
+        body {
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .result-box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .result-box h1 {
+            color: #00796b;
+        }
+        .result-box p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>🎉 Quiz Completed!</h1>
+        <p><strong>Background:</strong> {{ background }}</p>
+        <p><strong>Score:</strong> {{ score }}/{{ total }}</p>
+        <p><strong>Level:</strong> {{ level }}</p>
+        <p>You will be redirected to your dashboard shortly...</p>
+    </div>
+</body>
+</html>

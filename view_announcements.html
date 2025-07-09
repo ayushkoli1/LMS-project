@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Announcements</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .container { max-width: 800px; margin: 40px auto; }
+        h2 { text-align: center; }
+        .announcement {
+            background-color: #f4f4f4;
+            border-left: 5px solid #007BFF;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .date { color: #777; font-size: 0.9em; margin-bottom: 5px; }
+        .back-btn { text-align: center; display: block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📢 Announcements</h2>
+        {% if announcements %}
+            {% for note in announcements %}
+                <div class="announcement">
+                    <div class="date">{{ note.Date }}</div>
+                    <strong>{{ note.Title }}</strong>
+                    <p>{{ note.Description }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No announcements yet.</p>
+        {% endif %}
+        <a href="{{ url_for('student_dashboard') }}" class="back-btn">🔙 Back to Dashboard</a>
+    </div>
+</body>
+</html>

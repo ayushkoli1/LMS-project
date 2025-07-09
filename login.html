@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | LMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6a89cc, #b8e994);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-box {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+    }
+    .login-box .header {
+      margin-bottom: 20px;
+      color: #2d3436;
+    }
+    .login-box .header i {
+      color: #0984e3;
+    }
+    .login-box .header h2 {
+      margin-top: 10px;
+    }
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      border: 1px solid #dfe6e9;
+      border-radius: 8px;
+      padding: 10px;
+      background: #f8f9fa;
+    }
+    .input-group i {
+      margin-right: 10px;
+      color: #636e72;
+    }
+    .input-group input,
+    .input-group select {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 15px;
+      background: transparent;
+    }
+    .btn-primary {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #0984e3;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #0652DD;
+    }
+    .error {
+      margin-bottom: 15px;
+      color: #d63031;
+      font-size: 14px;
+    }
+    .login-box p {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .login-box p a {
+      color: #0984e3;
+      text-decoration: none;
+    }
+    .login-box p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <div class="header">
+      <i class="fas fa-user-circle fa-4x"></i>
+      <h2>Welcome Back!</h2>
+    </div>
+
+    {% if error %}
+      <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST">
+      <div class="input-group">
+        <i class="fas fa-users"></i>
+        <select name="role" required>
+          <option value="">Select Role</option>
+          <option value="student">Student</option>
+          <option value="instructor">Instructor</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="username" placeholder="Email" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+
+      <button type="submit" class="btn-primary">Login</button>
+    </form>
+
+    <p>
+      <a href="{{ url_for('forgot_password') }}">Forgot Password?</a> |
+      <a href="{{ url_for('signup') }}">Sign Up</a>
+    </p>
+  </div>
+
+</body>
+</html>

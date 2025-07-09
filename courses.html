@@ -1,0 +1,56 @@
+<!-- templates/courses.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Courses</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 40px; }
+        h2 { color: #2c3e50; margin-bottom: 20px; }
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .course-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .course-card h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+        .enroll-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #27ae60;
+            color: white;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .enroll-btn:hover { background-color: #219150; }
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>📚 Available Courses</h2>
+    <div class="course-list">
+        {% for course in courses %}
+        <div class="course-card">
+            <h3>{{ course.title }}</h3>
+            <p>{{ course.description }}</p>
+            <a class="enroll-btn" href="{{ url_for('enroll', course_title=course.title) }}">Enroll</a>
+        </div>
+        {% endfor %}
+    </div>
+    <a class="back-link" href="{{ url_for('student_dashboard') }}">← Back to Dashboard</a>
+</body>
+</html>

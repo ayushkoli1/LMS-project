@@ -1,0 +1,45 @@
+<!-- templates/quiz_history.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz History</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f0f8ff; }
+        h2 { color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border: 1px solid #ccc; text-align: center; }
+        th { background-color: #3498db; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        a.back { display: inline-block; margin-top: 20px; color: #3498db; text-decoration: none; }
+        a.back:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h2>📊 Your Quiz History</h2>
+    {% if records %}
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Background</th>
+                <th>Score</th>
+                <th>Total</th>
+                <th>Percentage</th>
+                <th>Level</th>
+            </tr>
+            {% for row in records %}
+            <tr>
+                <td>{{ row.DateTime }}</td>
+                <td>{{ row.Background }}</td>
+                <td>{{ row.Score }}</td>
+                <td>{{ row.Total }}</td>
+                <td>{{ row.Percentage }}%</td>
+                <td>{{ row.Level }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No quiz records found.</p>
+    {% endif %}
+    <a class="back" href="{{ url_for('student_dashboard') }}">← Back to Dashboard</a>
+</body>
+</html>
