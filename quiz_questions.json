@@ -1,0 +1,106 @@
+{
+  "IT": [
+    {
+      "question": "What does HTML stand for?",
+      "options": ["HyperText Markup Language", "Hyper Tool Markup Language", "Home Tool Markup Language"],
+      "answer": "HyperText Markup Language"
+    },
+    {
+      "question": "What is the time complexity of binary search?",
+      "options": ["O(n)", "O(log n)", "O(n^2)"],
+      "answer": "O(log n)"
+    },
+    {
+      "question": "Which language is used for data analysis?",
+      "options": ["C", "Java", "Python"],
+      "answer": "Python"
+    },
+    {
+      "question": "Which database is NoSQL?",
+      "options": ["MySQL", "MongoDB", "Oracle"],
+      "answer": "MongoDB"
+    },
+    {
+      "question": "Which tag is used to create a hyperlink in HTML?",
+      "options": ["<link>", "<a>", "<href>"],
+      "answer": "<a>"
+    },
+    {
+      "question": "What is the use of Git?",
+      "options": ["To host websites", "To manage code versions", "To design UI"],
+      "answer": "To manage code versions"
+    },
+    {
+      "question": "Which one is a Python web framework?",
+      "options": ["Django", "React", "Laravel"],
+      "answer": "Django"
+    },
+    {
+      "question": "Which protocol is used to send emails?",
+      "options": ["HTTP", "SMTP", "FTP"],
+      "answer": "SMTP"
+    },
+    {
+      "question": "What does CSS stand for?",
+      "options": ["Cascading Style Sheets", "Creative Style Scripts", "Computer Style Sheet"],
+      "answer": "Cascading Style Sheets"
+    },
+    {
+      "question": "Which one is a frontend language?",
+      "options": ["HTML", "Java", "PHP"],
+      "answer": "HTML"
+    }
+  ],
+  "Non-IT": [
+    {
+      "question": "What is the capital of France?",
+      "options": ["Berlin", "Madrid", "Paris"],
+      "answer": "Paris"
+    },
+    {
+      "question": "2 + 2 × 2 = ?",
+      "options": ["6", "8", "4"],
+      "answer": "6"
+    },
+    {
+      "question": "Which planet is known as the Red Planet?",
+      "options": ["Earth", "Mars", "Jupiter"],
+      "answer": "Mars"
+    },
+    {
+      "question": "Which gas do plants absorb from the atmosphere?",
+      "options": ["Oxygen", "Carbon Dioxide", "Nitrogen"],
+      "answer": "Carbon Dioxide"
+    },
+    {
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "George Orwell"],
+      "answer": "William Shakespeare"
+    },
+    {
+      "question": "What is the square root of 81?",
+      "options": ["8", "9", "7"],
+      "answer": "9"
+    },
+    {
+      "question": "What is H2O?",
+      "options": ["Oxygen", "Water", "Hydrogen"],
+      "answer": "Water"
+    },
+    {
+      "question": "How many continents are there?",
+      "options": ["5", "6", "7"],
+      "answer": "7"
+    },
+    {
+      "question": "What is the boiling point of water in Celsius?",
+      "options": ["100°C", "0°C", "212°C"],
+      "answer": "100°C"
+    },
+    {
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "options": ["India", "Japan", "China"],
+      "answer": "Japan"
+    }
+  ]
+}
